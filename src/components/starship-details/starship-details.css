@@ -1,0 +1,18 @@
+.person-details{
+    display: flex;
+    background: #303030;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.person-image{
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+.btn-alert{
+    width: max-content;
+    border-radius: 7px;
+    margin: 10px;
+}
