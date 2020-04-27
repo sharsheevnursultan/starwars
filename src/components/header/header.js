@@ -1,22 +1,24 @@
 import React from 'react';
 import "./header.css"
 
-
-
-
-
-
 const Header = () => {
     return (
         <div className="header d-flex">
-
             <h3>
-                <a href="#">Star Wars</a>
+                <a href="https://swapi.dev"
+                   rel="noopener noreferrer"
+                   target='_blank'>Star Wars</a>
             </h3>
             <ul className='d-flex'>
-                <li><a href="/itemlist">People</a></li>
-                <li><a href="#">Planets</a></li>
-                <li><a href="/starShipsItemList">Starships</a></li>
+                <a href="/peoples">
+                    <li>People</li>
+                </a>
+                <a href="/planets">
+                    <li>Planets</li>
+                </a>
+                <a href="/starShipsItemList">
+                    <li>StarShips</li>
+                </a>
             </ul>
         </div>
     )

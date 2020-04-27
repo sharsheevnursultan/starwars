@@ -15,7 +15,6 @@ export default class ItemList extends Component {
             .then((peopleList) => {
                 this.setState({peopleList})
             });
-
     }
 
     renderItems(arr) {
@@ -29,30 +28,19 @@ export default class ItemList extends Component {
                 >
                     {item.name}
                 </a>
-
             )
         })
     }
 
     render() {
         const {peopleList} = this.state;
-
         if (!peopleList) {
             return <Spinner/>
         }
         const items = this.renderItems(peopleList);
-
         if (peopleList) {
-            return (
-
-                <div className='my-padding' >
-                    {items}
-                </div>
-
-
-            )
+            return (<div>{items}</div>)
         }
     }
-
 };
 

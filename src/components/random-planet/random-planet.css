@@ -2,13 +2,13 @@
     display: flex;
     padding: 1rem;
     background: #303030;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: .25rem;
 }
+
 .random-planet .planet-image{
     width: 150px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: .25rem;
     margin-right: 1rem;
 }
 
@@ -21,7 +21,4 @@
 .random-planet .list-group .term{
     margin-right: .5rem;
 
-}
-.d-none{
-    display: none;
 }

@@ -9,26 +9,19 @@ class Person extends Component {
     };
     onPersonSelected = (id) => {
         this.setState({selectedPerson: id})
-
     };
 
     render() {
         return (
-            <div>
-                <div className='display-flex' >
-                    <div >
-                        <ItemList onItemSelected={this.onPersonSelected}/>
-                    </div>
-                    <div>
-                        <PersonDetails personId={this.state.selectedPerson}/>
-                    </div>
-
-
+            <div className='row mr-0'>
+                <div className='col-md-6'>
+                    <ItemList onItemSelected={this.onPersonSelected}/>
                 </div>
-
+                <div className="col-md-6">
+                    <PersonDetails personId={this.state.selectedPerson}/>
+                </div>
             </div>
         )
-
     }
 }
 

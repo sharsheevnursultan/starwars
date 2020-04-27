@@ -24,7 +24,6 @@ export default class StarShipDetails extends Component {
             .then((personInfo) => {
                 this.setState({personInfo})
             });
-
     }
 
     render() {
@@ -38,10 +37,8 @@ export default class StarShipDetails extends Component {
                     <img className='person-image'
                          src={`https://starwars-visualguide.com/assets/img/starships/${this.props.personId}.jpg`}
                          alt="Picture absent"/>
-
                 </div>
                 <div className='col-md-6 card-body'>
-
                     <h4 className='person-term'>
                         {personInfo.model}
                     </h4>
@@ -55,12 +52,9 @@ export default class StarShipDetails extends Component {
                             <span>{personInfo.crew}</span>
                         </li>
                         <button className="btn-danger btn-alert"><h4>Throw error</h4></button>
-
                     </ul>
                 </div>
             </div>
-
-
         )
     }
 };

@@ -1,3 +1,3 @@
-import StarshipsItemList from "./starships-item-list";
+import StarShipsItemList from "./starships-item-list";
 
-export default StarshipsItemList;
+export default StarShipsItemList;

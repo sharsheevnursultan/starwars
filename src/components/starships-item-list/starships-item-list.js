@@ -3,7 +3,7 @@ import SwapiService from '../../services/';
 import './starships-item-list.css';
 import Spinner from "../spinner";
 
-export default class StarShipsItemList extends Component {
+class StarShipsItemList extends Component {
     swapiService = new SwapiService();
     state = {
         starShipList: null,
@@ -15,7 +15,6 @@ export default class StarShipsItemList extends Component {
             .then((starShipList) => {
                 this.setState({starShipList})
             });
-
     }
 
     renderItems(arr) {
@@ -29,30 +28,25 @@ export default class StarShipsItemList extends Component {
                 >
                     {item.model}
                 </a>
-
             )
         })
     }
 
     render() {
         const {starShipList} = this.state;
-
         if (!starShipList) {
             return <Spinner/>
         }
         const items = this.renderItems(starShipList);
-
         if (starShipList) {
             return (
-
                 <div className='my-padding'>
                     {items}
                 </div>
-
-
             )
         }
     }
 
-};
+}
 
+export default StarShipsItemList;

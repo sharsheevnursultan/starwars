@@ -5,7 +5,6 @@ import Spinner from '../spinner';
 import ErrorIndicator from '../error-indicator';
 
 
-
 export default class RandomPlanet extends Component {
 
     swapiService = new SwapiService();
@@ -16,15 +15,15 @@ export default class RandomPlanet extends Component {
         error: false,
     };
 
-   componentDidMount() {
-       this.updatePlanet();
-       this.reloader();
+    componentDidMount() {
+        this.updatePlanet();
+        this.reloader();
 
-   }
+    }
 
-   reloader=()=>{
-       setInterval(this.updatePlanet,10000);
-   };
+    reloader = () => {
+        setInterval(this.updatePlanet, 10000);
+    };
 
     onError = (err) => {
         console.log('Text', err);
@@ -37,16 +36,16 @@ export default class RandomPlanet extends Component {
     };
 
 
-   onPlanetLoaded=(planet)=>{
-           this.setState({
-               planet,
-               loader: false,
+    onPlanetLoaded = (planet) => {
+        this.setState({
+            planet,
+            loader: false,
 
-           });
-           console.log(planet)
-       };
+        });
+        console.log(planet)
+    };
 
-    updatePlanet=()=> {
+    updatePlanet = () => {
 
 
         let id = Math.floor(Math.random() * 10) + 2;
@@ -64,7 +63,7 @@ export default class RandomPlanet extends Component {
         const notFoundError = error ? <ErrorIndicator/> : null;
 
         return (
-            <div id='id-random-planet' className='random-planet jumbotron rounded'>
+            <div id='id-random-planet' className='random-planet'>
                 {spinner}
                 {content}
                 {notFoundError}
